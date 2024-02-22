@@ -1,0 +1,67 @@
+.Header {
+    height: 60px;
+    width: 100%;
+    border-bottom: solid 2px #333;
+    display: block;
+    position: fixed;
+}
+.mainMenu {
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+.mainMenu .line {
+    width: 34px;
+    height: 4px;
+    background-color: #6d6d6d;
+    display: block;
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+.Messages {
+    position: absolute;
+    right: 70px;
+    top: 15px;
+}
+.Messages i {
+    color: #6d6d6d;
+    font-size: 30px;
+}
+.Messages span {
+    background-color: red;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    font-size: 11px;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    animation: up 0.8s infinite;
+}
+.Search {
+    position: absolute;
+    top: 15px;
+    right: 120px;
+}
+.Search i {
+    color: #6d6d6d;
+    font-size: 30px;
+}
+@keyframes up {
+    0% {
+      top: -15px;
+    }
+    50% {
+      top:-10px;
+    }
+    100% {
+        top: -15px;
+    }
+  }
