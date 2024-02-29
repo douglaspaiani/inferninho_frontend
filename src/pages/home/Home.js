@@ -18,6 +18,15 @@ const HomePage = () => {
                     post="/images/user/post-thalya.jpg"
                     likes="15"
                 />
+                <PostComponent
+                    name="Thalya Dorneles"
+                    photo="/images/user/photo-thalya.jpg"
+                    cover="cover-thalya.jpg"
+                    user="thalyadorneles"
+                    description="Teste de descrição"
+                    post="/images/user/post-thalya.jpg"
+                    likes="15"
+                />
             </div>
         </div>
     )

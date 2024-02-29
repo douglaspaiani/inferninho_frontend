@@ -54,6 +54,7 @@ a {
 }
 .container {
   padding:70px 10px 10px 10px;
+  overflow: hidden;
 }
 /* HOME */
 

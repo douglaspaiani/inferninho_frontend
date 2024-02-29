@@ -22,9 +22,6 @@ $(document).ready(function(){
         $(".Header .mainMenu").css('z-index', 0);
     });
     // Like post
-    $(".Post .posting img").dblclick(() => {
-        alert("The image was double-clicked!");
-    });
     $(".Post .posting .infos .like").click(function(){
         var like = $(".Post .posting .infos .like span").text()
         var likes = parseInt(like) + 1;

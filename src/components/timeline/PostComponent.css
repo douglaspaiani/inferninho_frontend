@@ -1,6 +1,5 @@
 .Post {
     width: 100%;
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 .Post .UserLine {
@@ -22,17 +21,29 @@
     margin-top: 5px;
 }
 .Post .UserLine .img {
-    width: 25%;
+    width: 20%;
     display: inline-block;
 }
 .Post .UserLine .img img {
-    width: 70px;
+    width: 60px;
     border-radius: 100px;
     border:solid 4px #575757;
 }
 .Post .UserLine .user {
-    width: 75%;
+    width: 70%;
     display: inline-block;
+}
+.Post .UserLine .user .verify {
+    display: inline-block;
+    color: rgb(0, 145, 255);
+    font-size: 15px;
+    margin-left: 6px;
+}
+.Post .UserLine .user .king {
+    display: inline-block;
+    color: rgb(255, 217, 0);
+    font-size: 15px;
+    margin-left: 6px;
 }
 .Post .posting {
     width: 100%;
@@ -71,3 +82,34 @@
 .Post .posting .infos .button span {
     font-size: 13px;
 }
+.Post .posting .imgPost {
+    position: relative;
+}
+.Post .posting .likePhoto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+.Post .posting .likePhoto i {
+    color: red;
+    font-size: 80px;
+    animation: like 1s 1;
+}
+/* LIKE EFFECT */
+@keyframes like {
+    0% {
+      transform: scale(2);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
