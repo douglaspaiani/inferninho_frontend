@@ -21,4 +21,16 @@ $(document).ready(function(){
         $(this).fadeOut(300).hide(300);
         $(".Header .mainMenu").css('z-index', 0);
     });
+    // Like post
+    $(".Post .posting img").dblclick(() => {
+        alert("The image was double-clicked!");
+    });
+    $(".Post .posting .infos .like").click(function(){
+        var like = $(".Post .posting .infos .like span").text()
+        var likes = parseInt(like) + 1;
+        $(".Post .posting .infos .like i").removeClass("fa-regular");
+        $(".Post .posting .infos .like i").addClass("fa-solid").css('color', 'red');
+        $(".Post .posting .infos .like span").text(likes);
+        $(this).removeClass("like");
+    });
 });
