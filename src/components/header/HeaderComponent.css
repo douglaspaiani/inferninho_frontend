@@ -4,34 +4,35 @@
     border-bottom: solid 2px #333;
     display: block;
     position: fixed;
+    background-color:#262626;
 }
 .mainMenu {
     background-color: transparent;
     border: 0;
     width: 40px;
     position: absolute;
-    right: 10px;
-    top: 17px;
+    right: 7px;
+    top: 22px;
 }
 .mainMenu .line {
-    width: 34px;
-    height: 4px;
+    width: 25px;
+    height: 3px;
     background-color: #6d6d6d;
     display: block;
     border-radius: 100px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 .Messages {
     position: absolute;
     right: 70px;
-    top: 15px;
+    top: 20px;
 }
 .Messages i {
     color: #6d6d6d;
-    font-size: 30px;
+    font-size: 25px;
 }
 .Messages span {
-    background-color: red;
+    background-color: rgb(212, 18, 18);
     color: #fff;
     width: 20px;
     height: 20px;
@@ -42,17 +43,47 @@
     font-size: 11px;
     position: absolute;
     top: -10px;
-    left: 20px;
+    left: 15px;
     animation: up 0.8s infinite;
 }
 .Search {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 120px;
 }
 .Search i {
     color: #6d6d6d;
-    font-size: 30px;
+    font-size: 25px;
+}
+.Menu {
+    background-color: #252525;
+    width: 250px;
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    top: 60px;
+    right: 10px;
+    display: none;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 0px 72px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 72px -15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 72px -15px rgba(0,0,0,0.75);
+}
+.Menu a {
+    color: #fff;
+    display: block;
+    padding: 10px 20px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+.Menu a i {
+    margin-right: 10px;
+}
+.Menu hr {
+    opacity: 0.3;
+}
+.Menu a:hover {
+    background-color:var(--color-primary);
 }
 @keyframes up {
     0% {
