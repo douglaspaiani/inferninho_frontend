@@ -23,11 +23,14 @@ $(document).ready(function(){
     });
     // Like post
     $(".Post .posting .infos .like").click(function(){
-        var like = $(".Post .posting .infos .like span").text()
+        const id = $(this).data('id');
+        var like = $("#"+id+" .posting .infos .like span").text()
         var likes = parseInt(like) + 1;
-        $(".Post .posting .infos .like i").removeClass("fa-regular");
-        $(".Post .posting .infos .like i").addClass("fa-solid").css('color', 'red');
-        $(".Post .posting .infos .like span").text(likes);
+        $("#"+id+" .posting .infos .like i").removeClass("fa-regular");
+        $("#"+id+" .posting .infos .like i").addClass("fa-solid").css('color', 'red');
+        $("#"+id+" .posting .infos .like span").text(likes);
+        $('#'+id+' .posting .likePhoto').fadeIn(400).css('display', 'grid');
+        $('#'+id+' .posting .likePhoto').fadeOut(2000).hide(2000);
         $(this).removeClass("like");
     });
 });

@@ -104,7 +104,7 @@
 /* LIKE EFFECT */
 @keyframes like {
     0% {
-      transform: scale(2);
+      transform: scale(1);
     }
     50% {
       transform: scale(2);

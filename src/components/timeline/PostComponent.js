@@ -4,34 +4,36 @@ import { useRef } from 'react';
 import useDoubleClick from 'use-double-click';
 
 const PostComponent = (props) => {
-
+    const id = props.id;
     const url = "https://inferninho.com.br/"+props.user;
     const AltPost = "Postagem de "+props.name
-    const DoubleClickImage = useRef();
-    useDoubleClick({
-        onDoubleClick: e => {
-            $('.like').trigger('click');
-            $('.Post .posting .likePhoto').fadeIn(400).css('display', 'grid');
-            $('.Post .posting .likePhoto').fadeOut(2000).hide(2000);
-        },
-        ref: DoubleClickImage,
-        latency: 250
-    });
+    const LikePostImage = (post, id) => {
+        const DoubleClickImage = useRef();
+        useDoubleClick({
+            onDoubleClick: e => {
+                $('#'+id+' .like').trigger('click');
+            },
+            ref: DoubleClickImage,
+            latency: 250
+        });
+        return <img ref={DoubleClickImage} src={post} alt={AltPost} title={AltPost}/>
+    }
     
-    const LikePost = () => {
-        //alert("The image was double-clicked!");
+    
+    const LikePost = (idPost) => {
+        //
     }
 
     return (
-        <div className="Post">
+        <div className="Post" id={id}>
             <div className="UserLine" style={{ backgroundImage: props.cover }}>
                 <div className="img">
                     <a href={url}><img src={props.photo}/></a>
                 </div>
                 <div className="user">
                     <a href={url}><span>{props.name} 
-                        <i class="verify fa-solid fa-circle-check"></i>
-                        <i class="king fa-solid fa-crown"></i>
+                        <i className="verify fa-solid fa-circle-check"></i>
+                        <i className="king fa-solid fa-crown"></i>
                     </span></a>
                     
                     <a href={url}><i>@{props.user}</i></a>
@@ -42,12 +44,12 @@ const PostComponent = (props) => {
                     {props.description}
                 </div>
                 <div className="imgPost">
-                    <img ref={DoubleClickImage} src={props.post} alt={AltPost} title={AltPost}/>
-                    <span className="likePhoto"><i class="fa-solid fa-heart"></i></span>
+                    {LikePostImage(props.post, id)}
+                    <span className="likePhoto"><i className="fa-solid fa-heart"></i></span>
                 </div>
                 <div className="infos">
-                    <button type="button" onClick={LikePost} className="like button"><i class="fa-regular fa-heart"></i> <span>{props.likes}</span></button>
-                    <a href="#" className="button"><i class="fa-solid fa-dollar-sign"></i> <span>Enviar um mimo</span></a>
+                    <button type="button" onClick={LikePost(id)} data-id={id} className="like button"><i className="fa-regular fa-heart"></i> <span>{props.likes}</span></button>
+                    <a href="#" className="button"><i className="fa-solid fa-dollar-sign"></i> <span>Enviar um mimo</span></a>
                 </div>
             </div>
         </div>
